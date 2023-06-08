@@ -21,6 +21,7 @@ fetch_eval <- function(dsn){
 }
 
 get_pred <- function(path,target,crs_obj = CRS("+proj=longlat +ellps=WGS84"),recursive){
+  #find files matching 'target' and import
   #expects the file matching 'target' to be raster
   #default crs is CRS("+proj=longlat +ellps=WGS84")
   f <- list.files(path,pattern = target,full.names = T,recursive = recursive) 
